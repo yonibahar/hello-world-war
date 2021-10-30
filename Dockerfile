@@ -1,2 +1,4 @@
 FROM ubuntu:20.04
-COPY /target/*.war /tmp
+RUN
+COPY
+CMD 
