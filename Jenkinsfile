@@ -14,8 +14,7 @@ pipeline {
 
     stage('Maven Compile') {
       steps {
-        sh '''cd hello-world-war_master
-mvn compile'''
+        sh 'mvn compile'
       }
     }
 
