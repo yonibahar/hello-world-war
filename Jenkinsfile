@@ -6,9 +6,15 @@ pipeline {
 
   }
   stages {
-    stage('checkout') {
+    stage('Checkout') {
       steps {
         git(url: 'https://github.com/yonibahar/hello-world-war.git', branch: 'master', changelog: true)
+      }
+    }
+
+    stage('Compile') {
+      steps {
+        sh 'mvn compile'
       }
     }
 
