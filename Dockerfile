@@ -1,3 +1,5 @@
 FROM tomcat
-COPY /target/*.war /usr/local/tomcat/webapps/war_file/
+
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
+
 EXPOSE 8080
