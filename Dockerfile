@@ -1,4 +1,3 @@
-FROM ubuntu:20.04
-RUN
-COPY
-CMD ["/bin/bash"]
+FROM tomcat
+COPY /target/*.war /usr/local/tomcat/webapps/war_file/
+EXPOSE 8080
