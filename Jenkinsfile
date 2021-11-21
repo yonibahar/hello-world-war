@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git(url: 'https://github.com/yonibahar/hello-world-war.git', branch: 'master', changelog: true)
+        git(url: 'https://github.com/yonibahar/hello-world-war.git', branch: 'dev', changelog: true)
       }
     }
 
