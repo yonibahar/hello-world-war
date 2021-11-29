@@ -19,5 +19,11 @@ mvn clean package'''
       }
     }
 
+    stage('SonarQube') {
+      steps {
+        withSonarQubeEnv(installationName: 'SonarQube-Server', credentialsId: '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', envOnly: true)
+      }
+    }
+
   }
 }
