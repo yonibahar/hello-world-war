@@ -21,7 +21,7 @@ mvn clean package'''
 
     stage('SonarQube') {
       steps {
-        withSonarQubeEnv(installationName: 'SonarQube-Server', credentialsId: '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', envOnly: true)
+        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=yonibahar_hello-world-war -Dsonar.login=fca131fc7be8100043f4a9b5f038437b7da06cb8'
       }
     }
 
