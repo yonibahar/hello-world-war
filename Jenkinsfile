@@ -25,5 +25,18 @@ mvn clean package'''
       }
     }
 
+    stage('Docker Build') {
+      steps {
+        sh 'docker build -t helloworld:$BUILD_ID .'
+      }
+    }
+
+    stage('Docker Tag & Push') {
+      steps {
+        sh '''docker tag helloworld:$BUILD_ID 127.0.0.1:8123/repository/local-docker/helloworld:$BUILD_ID
+docker push 127.0.0.1:8123/repository/local-docker/helloworld:$BUILD_ID'''
+      }
+    }
+
   }
 }
