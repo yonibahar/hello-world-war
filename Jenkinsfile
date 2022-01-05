@@ -33,10 +33,11 @@ mvn clean package'''
 
     stage('Docker Tag & Push') {
       steps {
+        withDockerRegistry(credentialsId: 'Nexus' , url: 'http://127.0.0.1:8123/repository/local-docker/') {
         sh '''docker tag helloworld:$BUILD_ID 127.0.0.1:8123/repository/local-docker/helloworld:$BUILD_ID
 docker push 127.0.0.1:8123/repository/local-docker/helloworld:$BUILD_ID'''
       }
     }
-
+    }
   }
 }
