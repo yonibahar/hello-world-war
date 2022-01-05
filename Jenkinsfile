@@ -48,7 +48,7 @@ docker push 127.0.0.1:8123/repository/local-docker/helloworld:$BUILD_ID'''
      }
 
      failure {
-          slackSend(message: 'Build Failure' - Module2', token: 'umVhmfifUUaxnxtOdQdSpAaN', channel: 'int-project', notifyCommitters: true)
+          slackSend(message: 'Build Failure - Module2', token: 'umVhmfifUUaxnxtOdQdSpAaN', channel: 'int-project', notifyCommitters: true)
      }
   }
 }
