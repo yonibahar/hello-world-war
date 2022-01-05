@@ -43,8 +43,8 @@ docker push 127.0.0.1:8123/repository/local-docker/helloworld:$BUILD_ID'''
 
   }
 }
-post {
-     success {
+     post {
+      success {
         slackSend(message: "Build deployed successfully - ${env.JOB_NAME} #${env.BUILD_NUMBER} - (${env.BUILD_URL}) ", channel: 'int-project', color: '#008000')
      }
 
