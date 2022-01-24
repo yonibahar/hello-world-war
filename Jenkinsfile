@@ -52,4 +52,7 @@ docker push 127.0.0.1:8123/repository/local-docker/helloworld:$BUILD_ID'''
     }
 
   }
+  triggers {
+    pollSCM('* * * * *')
+  }
 }
